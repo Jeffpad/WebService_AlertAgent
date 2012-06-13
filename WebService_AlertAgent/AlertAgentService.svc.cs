@@ -63,6 +63,8 @@ namespace WebService_AlertAgent
             }
 
             return false;
+
+
         }
 
         public void envoyerMessage(List<string> destinataires, int typeMessage, string sujet, string corps, bool acquittement, int dureeAffichage)
