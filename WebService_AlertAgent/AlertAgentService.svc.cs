@@ -15,14 +15,6 @@ namespace WebService_AlertAgent
         private List<Utilisateur> _listeUtilisateurs;
         private List<Message> _listeMessages;
         private Message _message;
-
-        public List<Utilisateur> UsersList
-        { 
-            get
-            {
-                return _listeUtilisateurs;
-            }
-        }
      
         public void ajouterUtilisateur(string nomUtilisateur)
         {
