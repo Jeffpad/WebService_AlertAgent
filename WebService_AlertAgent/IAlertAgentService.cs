@@ -12,10 +12,19 @@ namespace WebService_AlertAgent
     [ServiceContract]
     public interface IAlertAgentService
     {
-        public void ajouterUtilisateur(string nomUtilisateur);
-        public bool supprimerUtilisateur(string nomUtilisateur);
-        public bool connexionAdmin(string nomUtilisateur, string motDePasse);
-        public bool deconnexionAdmin(string nomUtilisateur);
-        public void envoyerMessage(List<string> destinataires, int typeMessage, string sujet, string corps, bool acquittement, int dureeAffichage);
+        [OperationContract]
+        void ajouterUtilisateur(string nomUtilisateur);
+
+        [OperationContract]
+        bool supprimerUtilisateur(string nomUtilisateur);
+
+        [OperationContract]
+        bool connexionAdmin(string nomUtilisateur, string motDePasse);
+
+        [OperationContract]
+        bool deconnexionAdmin(string nomUtilisateur);
+
+        [OperationContract]
+        void envoyerMessage(List<string> destinataires, int typeMessage, string sujet, string corps, bool acquittement, int dureeAffichage);
     }
 }
